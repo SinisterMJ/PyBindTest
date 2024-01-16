@@ -1,7 +1,7 @@
 # PyBindTest
 
 Build library:
-gcc -shared -o libhello.so -fPIC hello.c
+gcc -shared -o liblibrary.so -fPIC library.c
 
 Verify with library_test:
 gcc library_test.c -L. -llibrary -o library_test & ./library_test
