@@ -41,7 +41,8 @@ PYBIND11_MODULE(add_c, mod) {
         }
         )
         .def("__exit__", [] (Container& obj) {
+            std::cout << "Went into destructor?" << std::endl;
             for (int i = 0; i < 3; ++i)
-                delete obj.lineData;
+                delete obj.lineData[i];
          });
 }
